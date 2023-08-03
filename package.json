@@ -1,0 +1,14 @@
+{
+  "name": "webscrapper-bcnews",
+  "version": "1.0.0",
+  "description": "new scrapper for Richmond BC",
+  "main": "scrape.js",
+  "repository": "https://github.com/leo-sn/websrapper-bcnews.git",
+  "author": "Leo Nascimento <95266043+leo-sn@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "type": "module"
+}
