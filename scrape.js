@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+const puppeteer = require('puppeteer');
 
 const url = "https://www.richmond-news.com/highlights";
 
@@ -29,13 +29,12 @@ const main = async () => {
 
         return (news)
     })
-
-
-    console.log(allNews)
-
     // close the browser we created after captured the screenshot
     await browser.close();
 
+    console.log(allNews)
+
+    return allNews;
 }
 
-main();
+module.exports = { main };
