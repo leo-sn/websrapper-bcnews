@@ -19,7 +19,6 @@ const main = async () => {
 
         let news = Array.from(newsSelector).slice(0, 3).map((n) => {
 
-
             const title = n.querySelector('h2').innerText;
             const date = n.querySelector('time').title;
             const summary = n.getElementsByClassName('media-intro')[0].innerHTML;
@@ -31,10 +30,9 @@ const main = async () => {
     })
     // close the browser we created after captured the screenshot
     await browser.close();
-
-    console.log(allNews)
-
+    
     return allNews;
+    
 }
 
 module.exports = { main };
