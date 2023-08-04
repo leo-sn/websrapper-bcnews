@@ -26,18 +26,29 @@ function displayDataOnPage(data) {
     // Create and append HTML elements to display the scraped data
     data.forEach((newsItem) => {
       const article = document.createElement("article");
-      const title = document.createElement("h2");
+      const source = document.createElement("p");
+      const title = document.createElement("h3");
       const date = document.createElement("p");
       const summary = document.createElement("p");
+      const div = document.createElement("div");
   
+      div.classList.add("news-metadata")
+      source.innerText = newsItem.source;
+      source.classList.add("news-source");
       title.innerText = newsItem.title;
+      title.classList.add("news-title");
       date.innerText = newsItem.date;
+      date.classList.add("news-date");
       summary.innerText = newsItem.summary;
+      summary.classList.add("news-summary");
+
+      div.appendChild(date)
+      div.appendChild(source)
   
+      
       article.appendChild(title);
-      article.appendChild(date);
       article.appendChild(summary);
-  
+      article.appendChild(div);
       mainElement.appendChild(article);
     });
   }

@@ -17,13 +17,14 @@ const main = async () => {
         //create the selector from the page
         const newsSelector = document.getElementsByClassName('media');
 
-        let news = Array.from(newsSelector).slice(0, 3).map((n) => {
+        let news = Array.from(newsSelector).map((n) => {
 
             const title = n.querySelector('h2').innerText;
             const date = n.querySelector('time').title;
             const summary = n.getElementsByClassName('media-intro')[0].innerHTML;
+            const source = "Richmond-News"
 
-            return {title, summary, date}
+            return {title, summary, date, source}
         })
 
         return (news)
